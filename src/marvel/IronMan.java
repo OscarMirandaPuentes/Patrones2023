@@ -1,4 +1,6 @@
-package model.products;
+package marvel;
+
+import model.products.Hero;
 
 public class IronMan implements Hero{
 
@@ -6,6 +8,12 @@ public class IronMan implements Hero{
 	public String Saludar() {
 		// TODO Auto-generated method stub
 		return "Yo soy Iroman";
+	}
+
+	@Override
+	public String getNombre() {
+		// TODO Auto-generated method stub
+		return "IronMan";
 	}
 
 }

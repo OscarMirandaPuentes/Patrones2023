@@ -1,5 +1,5 @@
 package model.products;
 
 public interface Comic {
-	public String darMensaje();
+	public String titulo();
 }

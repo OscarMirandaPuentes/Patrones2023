@@ -1,6 +1,6 @@
 package model.products;
 
-public interface Hero {
+public interface Villano {
 	public String getNombre();
-	public String Saludar();
+	public String Burla();
 }
