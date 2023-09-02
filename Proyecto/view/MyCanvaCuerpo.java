@@ -2,8 +2,8 @@ package view;
 
 import javax.swing.*;
 
-import model.CabezaMale;
 import model.Cuerpo;
+import model.Funkos.CabezaMaleF;
 
 import java.awt.*;
 

@@ -1,6 +1,6 @@
 package model;
 
-public interface FunkoFactory {
+public interface ToysFactory {
 	public Cabeza crearCabeza();
 	public Cuerpo crearCuerpo();
 	public Piernas crearPiernas();

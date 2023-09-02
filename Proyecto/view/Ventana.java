@@ -35,6 +35,8 @@ public class Ventana extends JFrame{
 	public JLabel labelC;
 	public JLabel labelL;
 	public JButton button1;
+	public JButton buttonO;
+	public JButton buttonO2;
 	public JButton buttonM;
 	public JButton buttonF;
 	public JButton buttonG;
@@ -74,6 +76,16 @@ public class Ventana extends JFrame{
 		this.buttonF.addActionListener(ev);
 		this.buttonF.setVisible(false);
 		
+		this.buttonO=new JButton("Funko");
+		this.buttonO.setBounds(100,450,100,50);
+		this.buttonO.addActionListener(ev);
+		this.buttonO.setVisible(false);
+		
+		this.buttonO2=new JButton("Lego");
+		this.buttonO2.setBounds(400,450,100,50);
+		this.buttonO2.addActionListener(ev);
+		this.buttonO2.setVisible(false);
+		
 		this.buttonG=new JButton("Generar");
 		this.buttonG.setBounds(400,410,100,50);
 		this.buttonG.addActionListener(ev);
@@ -87,6 +99,8 @@ public class Ventana extends JFrame{
 		this.add(button1);
 		this.add(buttonM);
 		this.add(buttonF);
+		this.add(buttonO);
+		this.add(buttonO2);
 		this.add(buttonG);
 		this.add(buttonGG);
 	}
@@ -94,6 +108,11 @@ public class Ventana extends JFrame{
 	public void botoneGen() {
 		this.buttonF.setVisible(true);
 		this.buttonM.setVisible(true);
+	}
+	
+	public void botoneOpt() {
+		this.buttonO.setVisible(true);
+		this.buttonO2.setVisible(true);
 	}
 	
 	public void UIGen() {

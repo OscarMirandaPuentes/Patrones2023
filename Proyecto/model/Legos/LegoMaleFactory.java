@@ -1,23 +1,28 @@
-package model;
+package model.Legos;
 
-public class FunkoFemaleFactory implements FunkoFactory{
+import model.Cabeza;
+import model.Cuerpo;
+import model.Piernas;
+import model.ToysFactory;
+
+public class LegoMaleFactory implements ToysFactory{
 
 	@Override
 	public Cabeza crearCabeza() {
 		// TODO Auto-generated method stub
-		return new CabezaFemale();
+		return new CabezaMaleL();
 	}
 
 	@Override
 	public Cuerpo crearCuerpo() {
 		// TODO Auto-generated method stub
-		return new CuerpoFemale();
+		return new CuerpoMaleL();
 	}
 
 	@Override
 	public Piernas crearPiernas() {
 		// TODO Auto-generated method stub
-		return new PiernasFemale();
+		return new PiernasMaleL();
 	}
 
 }

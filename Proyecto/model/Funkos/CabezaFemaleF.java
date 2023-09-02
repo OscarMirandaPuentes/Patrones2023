@@ -1,9 +1,11 @@
-package model;
+package model.Funkos;
 
 import java.awt.Color;
 import java.util.HashMap;
 
-public class CabezaMale implements Cabeza{
+import model.Cabeza;
+
+public class CabezaFemaleF implements Cabeza{
 	//Coordenadas Cara
 	private int x;
 	private int y;
@@ -15,7 +17,6 @@ public class CabezaMale implements Cabeza{
 	private int yp;
 	private int hp;
 	private int wp;
-		
 	
 	//Coordenadas Ojos
 	private int d1;
@@ -29,11 +30,13 @@ public class CabezaMale implements Cabeza{
 	private Color colorH;
 	private Color colorO;
 	private Color colorP;
+	
 	//Colores 
 	private HashMap<String, Color> colorMap = new HashMap<String, Color>();
 
 	
-	public CabezaMale() {
+	public CabezaFemaleF() {
+		super();
 		this.x = 180;
 		this.y = 30;
 		this.h = 150;
@@ -41,18 +44,20 @@ public class CabezaMale implements Cabeza{
 		this.xp= 170;
 		this.yp = 20;
 		this.hp = 170;
-		this.wp = 100;
+		this.wp = 170;
 		this.d1 = 30;
 		this.d2 = 30;
 		this.xo1 = 200;
 		this.yo1 = 80;
 		this.xo2 = 280;
 		this.yo2 = 80;
-		this.colorP = Color.black;
 		this.colorH = Color.white;
-		this.colorO = Color.blue;
+		this.colorO = Color.magenta;
+		this.colorP = Color.black;
 		this.ProductoInfo = new HashMap<>();
 		llenarHm();
+		
+
 	}
 	
 	private void llenarHm() {		
@@ -70,9 +75,9 @@ public class CabezaMale implements Cabeza{
 		this.ProductoInfo.put("yo1", this.yo1); 
 		this.ProductoInfo.put("xo2", this.xo2);
 		this.ProductoInfo.put("yo2", this.yo2); 
-		this.ProductoInfo.put("ColorH", this.colorH);
-		this.ProductoInfo.put("ColorP", this.colorP);
+		this.ProductoInfo.put("ColorH", this.colorH); 
 		this.ProductoInfo.put("ColorO", this.colorO); 
+		this.ProductoInfo.put("ColorP", this.colorP); 
 		
 		this.colorMap.put("black", Color.black);
 		this.colorMap.put("blue", Color.blue);
@@ -86,8 +91,8 @@ public class CabezaMale implements Cabeza{
 
 	@Override
 	public void personalizar(String lugar, String aspecto) {
-		// TODO Auto-generated method stub;
-		if (lugar.equals("Ojos")){						
+		// TODO Auto-generated method stub
+		if (lugar.equals("Ojos")){		
 			this.colorO = this.colorMap.get(aspecto);
 			this.ProductoInfo.put("ColorO", this.colorO);
 		}
@@ -106,6 +111,6 @@ public class CabezaMale implements Cabeza{
 		// TODO Auto-generated method stub
 		return ProductoInfo.get(aspecto);
 	}
-	
+
 
 }

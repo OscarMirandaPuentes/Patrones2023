@@ -1,9 +1,11 @@
-package model;
+package model.Legos;
 
 import java.awt.Color;
 import java.util.HashMap;
 
-public class CabezaFemale implements Cabeza{
+import model.Cabeza;
+
+public class CabezaFemaleL implements Cabeza{
 	//Coordenadas Cara
 	private int x;
 	private int y;
@@ -33,7 +35,7 @@ public class CabezaFemale implements Cabeza{
 	private HashMap<String, Color> colorMap = new HashMap<String, Color>();
 
 	
-	public CabezaFemale() {
+	public CabezaFemaleL() {
 		super();
 		this.x = 180;
 		this.y = 30;
@@ -49,8 +51,9 @@ public class CabezaFemale implements Cabeza{
 		this.yo1 = 80;
 		this.xo2 = 280;
 		this.yo2 = 80;
-		this.colorH = Color.white;
+		this.colorH = Color.yellow;
 		this.colorO = Color.magenta;
+		this.colorP = Color.black;
 		this.ProductoInfo = new HashMap<>();
 		llenarHm();
 		

@@ -1,18 +1,21 @@
-package model;
+package model.Funkos;
 
 import java.awt.Color;
 import java.util.HashMap;
 
-public class PiernasFemale implements Piernas{
+import model.Cuerpo;
 
-	private int x1;
-	private int y1;
-	private int w1;
-	private int h1;
-	private int x2;
-	private int y2;
-	private int w2;
-	private int h2;
+public class CuerpoMaleF implements Cuerpo{
+	//Coordenadas Cuerpo
+	private int x;
+	private int y;
+	private int w;
+	private int h;
+	private int[] brazo1x = {220, 220,210, 200};
+	private int[] brazo1y = {0, 40, 70, 60};
+	private int[] brazo2x = {290, 290,300,310};
+	private int[] brazo2y = {0, 40, 70, 60};
+
 	private Color colorH;
 	private HashMap<String, Object> ProductoInfo;
 
@@ -20,30 +23,25 @@ public class PiernasFemale implements Piernas{
 	private HashMap<String, Color> colorMap = new HashMap<String, Color>();
 	
 	
-	public PiernasFemale() {
-		this.x1 = 230;
-		this.y1 = 0;
-		this.w1 = 20;
-		this.h1 = 20;
-		this.x2 = 260;
-		this.y2 = 0;
-		this.w2 = 20;
-		this.h2 = 20;
+	public CuerpoMaleF() {
+		this.x = 220;
+		this.y = 0;
+		this.h = 70;
+		this.w = 80;
 		this.colorH = Color.blue;
 		this.ProductoInfo = new HashMap<>();
 		llenarHm();
 	}
 
 	private void llenarHm() {		
-		this.ProductoInfo.put("x1", this.x1); 
-		this.ProductoInfo.put("y1", this.y1);
-		this.ProductoInfo.put("h1", this.h1);
-		this.ProductoInfo.put("w1", this.w1);
-		this.ProductoInfo.put("x2", this.x2); 
-		this.ProductoInfo.put("y2", this.y2);
-		this.ProductoInfo.put("h2", this.h2);
-		this.ProductoInfo.put("w2", this.w2);
-
+		this.ProductoInfo.put("x", this.x); 
+		this.ProductoInfo.put("y", this.y);
+		this.ProductoInfo.put("h", this.h);
+		this.ProductoInfo.put("w", this.w);
+		this.ProductoInfo.put("brazo1x", this.brazo1x);
+		this.ProductoInfo.put("brazo1y", this.brazo1y);
+		this.ProductoInfo.put("brazo2x", this.brazo2x);
+		this.ProductoInfo.put("brazo2y", this.brazo2y);
 		this.ProductoInfo.put("ColorH", this.colorH); 
 		
 		this.colorMap.put("black", Color.black);
@@ -55,11 +53,11 @@ public class PiernasFemale implements Piernas{
 		this.colorMap.put("white", Color.white);
 		this.colorMap.put("black", Color.black);
 	}
-
+	
 	@Override
 	public void personalizar(String lugar, String aspecto) {
 		// TODO Auto-generated method stub
-		if (lugar.equals("Piernas")){						
+		if (lugar.equals("Cuerpo")){						
 			this.colorH = this.colorMap.get(aspecto);
 			this.ProductoInfo.put("ColorH", this.colorH);
 		}
@@ -70,5 +68,4 @@ public class PiernasFemale implements Piernas{
 		// TODO Auto-generated method stub
 		return ProductoInfo.get(aspecto);
 	}
-
 }
