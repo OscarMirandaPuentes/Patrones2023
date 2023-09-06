@@ -38,22 +38,22 @@ public class CabezaMaleL implements Cabeza{
 
 	
 	public CabezaMaleL() {
-		this.x = 180;
-		this.y = 30;
-		this.h = 150;
-		this.w = 120;
-		this.xp= 170;
-		this.yp = 20;
-		this.hp = 170;
-		this.wp = 100;
-		this.d1 = 30;
-		this.d2 = 30;
-		this.xo1 = 200;
-		this.yo1 = 80;
-		this.xo2 = 280;
-		this.yo2 = 80;
+		this.x = 210;
+		this.y = 60;
+		this.h = 90;
+		this.w = 90;
+		this.xp= 190;
+		this.yp = 40;
+		this.hp = 130;
+		this.wp = 80;
+		this.d1 = 25;
+		this.d2 = 25;
+		this.xo1 = 220;
+		this.yo1 = 90;
+		this.xo2 = 270;
+		this.yo2 = 90;
 		this.colorP = Color.black;
-		this.colorH = Color.white;
+		this.colorH = Color.yellow;
 		this.colorO = Color.blue;
 		this.ProductoInfo = new HashMap<>();
 		llenarHm();

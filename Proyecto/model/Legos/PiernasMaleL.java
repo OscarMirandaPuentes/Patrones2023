@@ -24,14 +24,14 @@ public class PiernasMaleL implements Piernas{
 	
 	
 	public PiernasMaleL() {
-		this.x1 = 230;
+		this.x1 = 220;
 		this.y1 = 0;
 		this.w1 = 20;
-		this.h1 = 20;
+		this.h1 = 30;
 		this.x2 = 260;
 		this.y2 = 0;
 		this.w2 = 20;
-		this.h2 = 20;
+		this.h2 = 30;
 		this.colorH = Color.green;
 		this.ProductoInfo = new HashMap<>();
 		llenarHm();

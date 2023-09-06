@@ -13,9 +13,9 @@ public class CuerpoFemaleL implements Cuerpo{
 	private int y;
 	private int w;
 	private int h;
-	private int[] brazo1x = {230, 230,210, 200};
+	private int[] brazo1x = {220, 220,210, 200};
 	private int[] brazo1y = {0, 40, 70, 60};
-	private int[] brazo2x = {280, 280,300,310};
+	private int[] brazo2x = {290, 290,300,310};
 	private int[] brazo2y = {0, 40, 70, 60};
 
 	private Color colorH;
@@ -26,9 +26,9 @@ public class CuerpoFemaleL implements Cuerpo{
 	
 	
 	public CuerpoFemaleL() {
-		this.x = 230;
+		this.x = 220;
 		this.y = 0;
-		this.h = 50;
+		this.h = 70;
 		this.w = 80;
 		this.colorH = Color.pink;
 		this.ProductoInfo = new HashMap<>();
