@@ -35,4 +35,9 @@ public class MyPanel extends JPanel{
 			this.mp.refresh();
 		}
 	}
+	
+	public void clean() {
+			removeAll();
+            repaint(); // Vuelve a pintar el JPanel	
+	}
 }

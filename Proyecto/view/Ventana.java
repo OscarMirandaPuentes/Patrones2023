@@ -41,6 +41,7 @@ public class Ventana extends JFrame{
 	public JButton buttonF;
 	public JButton buttonG;
 	public JButton buttonGG;
+	public JButton buttonR;
 	
 	private String colors[]
 	        = { "blue", "red", "yellow", "pink", "white", "magenta", "black" };
@@ -92,9 +93,14 @@ public class Ventana extends JFrame{
 		this.buttonG.setVisible(false);
 		
 		this.buttonGG=new JButton("Guardar");
-		this.buttonGG.setBounds(400,490,100,50);
+		this.buttonGG.setBounds(400,460,100,50);
 		this.buttonGG.addActionListener(ev);
 		this.buttonGG.setVisible(false);
+		
+		this.buttonR=new JButton("Reiniciar");
+		this.buttonR.setBounds(400,510,100,50);
+		this.buttonR.addActionListener(ev);
+		this.buttonR.setVisible(false);
 		
 		this.add(button1);
 		this.add(buttonM);
@@ -103,6 +109,7 @@ public class Ventana extends JFrame{
 		this.add(buttonO2);
 		this.add(buttonG);
 		this.add(buttonGG);
+		this.add(buttonR);
 	}
 	
 	public void botoneGen() {
@@ -126,6 +133,19 @@ public class Ventana extends JFrame{
 		this.color_cuerpo.setVisible(true);
 		this.labelL.setVisible(true);
 		this.color_piernas.setVisible(true);
+	}
+	
+	public void UIOff() {
+		this.label.setVisible(false);
+		this.color_ojos.setVisible(false);
+		this.labelP.setVisible(false);
+		this.color_piel.setVisible(false);
+		this.labelH.setVisible(false);
+		this.color_pelo.setVisible(false);
+		this.labelC.setVisible(false);
+		this.color_cuerpo.setVisible(false);
+		this.labelL.setVisible(false);
+		this.color_piernas.setVisible(false);
 	}
 	
 	public void addFields() {

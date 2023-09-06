@@ -37,6 +37,7 @@ public class Eventos implements ActionListener {
 			v.buttonM.setVisible(false);
 			v.buttonG.setVisible(true);
 			v.buttonGG.setVisible(true);
+			v.buttonR.setVisible(true);
 			v.UIGen();
 		}
 		
@@ -50,6 +51,14 @@ public class Eventos implements ActionListener {
 		}
 		if(e.getSource() == v.buttonGG) {	
 			v.guardar();		
+		}
+		if(e.getSource() == v.buttonR) {
+			v.mp.clean();
+			v.UIOff();	
+			v.botoneOpt();
+			v.buttonG.setVisible(false);
+			v.buttonGG.setVisible(false);
+			v.buttonR.setVisible(false);
 		}
 		
 	}
