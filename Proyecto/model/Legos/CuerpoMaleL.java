@@ -4,6 +4,8 @@ import java.awt.Color;
 import java.util.HashMap;
 
 import model.Cuerpo;
+import model.Parte;
+import model.Funkos.CuerpoMaleF;
 
 public class CuerpoMaleL implements Cuerpo{
 	//Coordenadas Cuerpo
@@ -29,6 +31,16 @@ public class CuerpoMaleL implements Cuerpo{
 		this.h = 70;
 		this.w = 80;
 		this.colorH = Color.blue;
+		this.ProductoInfo = new HashMap<>();
+		llenarHm();
+	}
+	
+	private CuerpoMaleL(CuerpoMaleL cuerpoMaleL) {
+		this.x = cuerpoMaleL.x;
+		this.y = cuerpoMaleL.y;
+		this.h = cuerpoMaleL.h;
+		this.w = cuerpoMaleL.w;
+		this.colorH = cuerpoMaleL.colorH;
 		this.ProductoInfo = new HashMap<>();
 		llenarHm();
 	}
@@ -67,5 +79,11 @@ public class CuerpoMaleL implements Cuerpo{
 	public Object mostrar(String aspecto) {
 		// TODO Auto-generated method stub
 		return ProductoInfo.get(aspecto);
+	}
+	
+	@Override
+	public Parte clonar() {
+		// TODO Auto-generated method stub
+		return new CuerpoMaleL(this);
 	}
 }

@@ -4,6 +4,8 @@ import java.awt.Color;
 import java.util.HashMap;
 
 import model.Cabeza;
+import model.Parte;
+import model.Funkos.CabezaMaleF;
 
 public class CabezaMaleL implements Cabeza{
 	//Coordenadas Cara
@@ -57,6 +59,28 @@ public class CabezaMaleL implements Cabeza{
 		llenarHm();
 	}
 	
+	private CabezaMaleL(CabezaMaleL cabezaMaleL) {
+		// TODO Auto-generated constructor stub
+		this.x = cabezaMaleL.x;
+		this.y = cabezaMaleL.y;
+		this.h = cabezaMaleL.h;
+		this.w = cabezaMaleL.w;
+		this.xp= cabezaMaleL.xp;
+		this.yp = cabezaMaleL.yp;
+		this.hp = cabezaMaleL.hp;
+		this.wp = cabezaMaleL.wp;
+		this.d1 = cabezaMaleL.d1;
+		this.d2 = cabezaMaleL.d2;
+		this.xo1 = cabezaMaleL.xo1;
+		this.yo1 = cabezaMaleL.yo1;
+		this.xo2 = cabezaMaleL.xo2;
+		this.yo2 = cabezaMaleL.yo2;
+		this.colorH = cabezaMaleL.colorH;
+		this.colorO = cabezaMaleL.colorO;
+		this.colorP = cabezaMaleL.colorP;
+		this.ProductoInfo = new HashMap<>();
+		llenarHm();
+	}
 	private void llenarHm() {		
 		this.ProductoInfo.put("x", this.x); 
 		this.ProductoInfo.put("y", this.y);
@@ -108,6 +132,10 @@ public class CabezaMaleL implements Cabeza{
 		// TODO Auto-generated method stub
 		return ProductoInfo.get(aspecto);
 	}
-	
+	@Override
+	public Parte clonar() {
+		// TODO Auto-generated method stub
+		return new CabezaMaleL(this);
+	}
 
 }

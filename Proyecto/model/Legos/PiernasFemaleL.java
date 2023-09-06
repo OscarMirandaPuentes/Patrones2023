@@ -3,7 +3,9 @@ package model.Legos;
 import java.awt.Color;
 import java.util.HashMap;
 
+import model.Parte;
 import model.Piernas;
+import model.Funkos.PiernasFemaleF;
 
 public class PiernasFemaleL implements Piernas{
 
@@ -34,6 +36,19 @@ public class PiernasFemaleL implements Piernas{
 		this.colorH = Color.blue;
 		this.ProductoInfo = new HashMap<>();
 		llenarHm();
+	}
+	
+	private PiernasFemaleL(PiernasFemaleL piernasFemaleL) {
+		// TODO Auto-generated constructor stub
+		this.x1 = piernasFemaleL.x1;
+		this.y1 = piernasFemaleL.y1;
+		this.h1 = piernasFemaleL.h1;
+		this.w1 = piernasFemaleL.w1;
+		this.x2 = piernasFemaleL.x2;
+		this.y2 = piernasFemaleL.y2;
+		this.h2 = piernasFemaleL.h2;
+		this.w2 = piernasFemaleL.w2;
+		this.colorH = piernasFemaleL.colorH;
 	}
 
 	private void llenarHm() {		
@@ -71,6 +86,12 @@ public class PiernasFemaleL implements Piernas{
 	public Object mostrar(String aspecto) {
 		// TODO Auto-generated method stub
 		return ProductoInfo.get(aspecto);
+	}
+	
+	@Override
+	public Parte clonar() {
+		// TODO Auto-generated method stub
+		return new PiernasFemaleL(this);
 	}
 
 }

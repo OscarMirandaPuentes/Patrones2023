@@ -31,8 +31,8 @@ public class Eventos implements ActionListener {
 			v.botoneGen();
 		}
 		if(e.getSource() == v.buttonF || e.getSource() == v.buttonM) {
-			l.llamar().producir(e.getActionCommand());
-			v.crearCanva(l.llamar().getCabeza(), l.llamar().getCuerpo(), l.llamar().getPiernas());
+			l.llamar().elegirGenero(e.getActionCommand());
+			v.crearCanva(l.llamar().getBuilder().getCabeza(), l.llamar().getBuilder().getCuerpo(), l.llamar().getBuilder().getPiernas());
 			v.buttonF.setVisible(false);
 			v.buttonM.setVisible(false);
 			v.buttonG.setVisible(true);
@@ -41,11 +41,11 @@ public class Eventos implements ActionListener {
 		}
 		
 		if(e.getSource() == v.buttonG) {	
-			l.llamar().getCabeza().personalizar(v.color_ojos.getActionCommand(), (String)v.color_ojos.getSelectedItem());
-			l.llamar().getCabeza().personalizar(v.color_piel.getActionCommand(), (String)v.color_piel.getSelectedItem());
-			l.llamar().getCabeza().personalizar(v.color_pelo.getActionCommand(), (String)v.color_pelo.getSelectedItem());
-			l.llamar().getCuerpo().personalizar(v.color_cuerpo.getActionCommand(), (String)v.color_cuerpo.getSelectedItem());
-			l.llamar().getPiernas().personalizar(v.color_piernas.getActionCommand(), (String)v.color_piernas.getSelectedItem());
+			l.llamar().getBuilder().getCabeza().personalizar(v.color_ojos.getActionCommand(), (String)v.color_ojos.getSelectedItem());
+			l.llamar().getBuilder().getCabeza().personalizar(v.color_piel.getActionCommand(), (String)v.color_piel.getSelectedItem());
+			l.llamar().getBuilder().getCabeza().personalizar(v.color_pelo.getActionCommand(), (String)v.color_pelo.getSelectedItem());
+			l.llamar().getBuilder().getCuerpo().personalizar(v.color_cuerpo.getActionCommand(), (String)v.color_cuerpo.getSelectedItem());
+			l.llamar().getBuilder().getPiernas().personalizar(v.color_piernas.getActionCommand(), (String)v.color_piernas.getSelectedItem());
 			v.mp.refresh();		
 		}
 		if(e.getSource() == v.buttonGG) {	

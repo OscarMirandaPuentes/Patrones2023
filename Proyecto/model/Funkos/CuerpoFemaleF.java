@@ -4,6 +4,8 @@ import java.awt.Color;
 import java.util.HashMap;
 
 import model.Cuerpo;
+import model.Parte;
+import model.Legos.CuerpoFemaleL;
 
 public class CuerpoFemaleF implements Cuerpo{
 //Coordenadas Cuerpo
@@ -32,7 +34,17 @@ public class CuerpoFemaleF implements Cuerpo{
 		this.ProductoInfo = new HashMap<>();
 		llenarHm();
 	}
-
+	
+	private CuerpoFemaleF(CuerpoFemaleF cuerpoFemaleF) {
+		this.x = cuerpoFemaleF.x;
+		this.y = cuerpoFemaleF.y;
+		this.h = cuerpoFemaleF.h;
+		this.w = cuerpoFemaleF.w;
+		this.colorH = Color.pink;
+		this.ProductoInfo = new HashMap<>();
+		llenarHm();
+	}
+	
 	private void llenarHm() {		
 		this.ProductoInfo.put("x", this.x); 
 		this.ProductoInfo.put("y", this.y);
@@ -67,6 +79,12 @@ public class CuerpoFemaleF implements Cuerpo{
 	public Object mostrar(String aspecto) {
 		// TODO Auto-generated method stub
 		return ProductoInfo.get(aspecto);
+	}
+	
+	@Override
+	public Parte clonar() {
+		// TODO Auto-generated method stub
+		return new CuerpoFemaleF(this);
 	}
 
 }

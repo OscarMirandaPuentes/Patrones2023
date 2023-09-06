@@ -3,6 +3,7 @@ package model.Funkos;
 import java.awt.Color;
 import java.util.HashMap;
 
+import model.Parte;
 import model.Piernas;
 
 public class PiernasMaleF implements Piernas{
@@ -35,6 +36,19 @@ public class PiernasMaleF implements Piernas{
 		llenarHm();
 	}
 
+	private PiernasMaleF(PiernasMaleF piernasMaleF) {
+		// TODO Auto-generated constructor stub
+		this.x1 = piernasMaleF.x1;
+		this.y1 = piernasMaleF.y1;
+		this.h1 = piernasMaleF.h1;
+		this.w1 = piernasMaleF.w1;
+		this.x2 = piernasMaleF.x2;
+		this.y2 = piernasMaleF.y2;
+		this.h2 = piernasMaleF.h2;
+		this.w2 = piernasMaleF.w2;
+		this.colorH = piernasMaleF.colorH;
+	}
+	
 	private void llenarHm() {		
 		this.ProductoInfo.put("x1", this.x1); 
 		this.ProductoInfo.put("y1", this.y1);
@@ -72,4 +86,9 @@ public class PiernasMaleF implements Piernas{
 		return ProductoInfo.get(aspecto);
 	}
 
+	@Override
+	public Parte clonar() {
+		// TODO Auto-generated method stub
+		return new PiernasMaleF(this);
+	}
 }
