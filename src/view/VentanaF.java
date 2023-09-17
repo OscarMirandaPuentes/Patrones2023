@@ -1,17 +1,17 @@
 package view;
 
-import javax.swing.JButton;
-import javax.swing.JFrame;
-
 import controller.Eventos;
+import controller.EventosF;
 import model.Star;
+import model.Starfat;
 
+import javax.swing.*;
 import java.util.List;
 
-public class Ventana extends JFrame{
-	
-	private Eventos ev;
-	public MyPanel mp ;
+public class VentanaF extends JFrame{
+
+	private EventosF ev;
+	public MyPanelF mp ;
 
 	public JButton buttonD;
 	public JButton buttonI;
@@ -20,8 +20,8 @@ public class Ventana extends JFrame{
 
 
 
-	
-	public Ventana(Eventos e) {
+
+	public VentanaF(EventosF e) {
 		super("Mi ventana");
 		this.ev=e;
 		initComponents();
@@ -32,7 +32,7 @@ public class Ventana extends JFrame{
 		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
 		this.setLayout(null);
 		addButtons();
-		crearCanva(ev.getL().getEstrellas());
+		crearCanva(ev.getL().getEstrellasFat());
 		this.setVisible(true);
 	}
 	
@@ -62,8 +62,8 @@ public class Ventana extends JFrame{
 	}
 
 	
-	public void crearCanva(List<Star> estrellas) {
-		this.mp = new MyPanel(estrellas);
+	public void crearCanva(List<Starfat> estrellas) {
+		this.mp = new MyPanelF(estrellas);
 		this.mp.setBounds(0, 0, 1000, 550);
 		this.add(mp);
 	

@@ -4,27 +4,34 @@ import model.Star;
 
 import java.awt.*;
 import java.util.ArrayList;
-
+import java.util.List;
 import javax.swing.*;
 
 public class MyPanel extends JPanel{
-	private List<Star> estrellas = new ArrayList<>();
+	private List<Star> estrellas;
 
-	public MyPanel() {
+	public MyPanel(List<Star> estrellas) {
 		setBackground(Color.BLACK);
+		this.estrellas = estrellas;
 	}
 
 	@Override
 	protected void paintComponent(Graphics g) {
 		super.paintComponent(g);
-
-		for (Star icon : estrellas) {
-			icon.getStar().getImagen().paintIcon(this, g, icon.getX(), icon.getY());
+		if (estrellas != null) {
+			for (Star star : estrellas) {
+				if (star != null) {
+					star.getStar().getImagen().paintIcon(this, g, star.getX(), star.getY());
+				}
+			}
 		}
 	}
 
-	public void agregarEstrella(Star estrella) {
-		this.estrellas.add(estrella);
+	public List<Star> getEstrellas() {
+		return estrellas;
 	}
 
+	public void setEstrellas(List<Star> estrellas) {
+		this.estrellas = estrellas;
+	}
 }

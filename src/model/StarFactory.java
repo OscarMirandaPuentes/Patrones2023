@@ -1,7 +1,13 @@
 package model;
 
+import javax.swing.*;
+
 public class StarFactory {
-    public static StarType crearEstrella(String nombre) {
+    public StarType crearEstrella(String nombre) {
         return new StarType(nombre);
+    }
+
+    public Starfat crearEstrellaFat(ImageIcon imagen, String nombre, int x, int y) {
+        return new Starfat(imagen, nombre,x, y);
     }
 }

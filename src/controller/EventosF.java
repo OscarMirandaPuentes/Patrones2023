@@ -1,18 +1,19 @@
 package controller;
 
+import model.Logica;
+import view.Ventana;
+import view.VentanaF;
+
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-import model.Logica;
-import view.Ventana;
-
-public class Eventos implements ActionListener {
+public class EventosF implements ActionListener {
 	private Logica l;
-	private Ventana v;
-	
-	public Eventos(Logica l) {
+	private VentanaF v;
+
+	public EventosF(Logica l) {
 		this.l=l;
-		this.l.addStar();
+		this.l.addStarFat();
 	}
 	
 	@Override
@@ -47,17 +48,17 @@ public class Eventos implements ActionListener {
 	}
 
 
-	public Ventana getV() {
+	public VentanaF getV() {
 		return v;
 	}
 
 
-	public void setV(Ventana v) {
+	public void setV(VentanaF v) {
 		this.v = v;
 	}
 	
 	public void cargar(){
-		v.mp.setEstrellas(l.getEstrellas());
+		v.mp.setEstrellas(l.getEstrellasFat());
 	}
 	
 }

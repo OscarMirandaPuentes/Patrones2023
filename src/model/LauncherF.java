@@ -1,17 +1,19 @@
 package model;
 
 import controller.Eventos;
+import controller.EventosF;
 import view.Ventana;
+import view.VentanaF;
 
-public class Launcher {
+public class LauncherF {
 
 	public static void main(String[] args) {
 		
 		Logica l=new Logica();
 		
-		Eventos e=new Eventos(l);
+		EventosF e=new EventosF(l);
 		
-		Ventana v=new Ventana(e);
+		VentanaF v=new VentanaF(e);
 		e.setV(v);
 		e.cargar();
 		
